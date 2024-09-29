@@ -1,4 +1,31 @@
 # Client Task A #
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
+Task A 
+
+Start
+
+define var int CompPick 
+	CompPick = integer selected by Computer
+	Computer randomly selects single integer >=1 or <=10
+		Print message "I have chosen a number; please try to guess it. You have three chances."
+	
+ define var int UserPick
+	UserPick = integer input by use
+ LOOP
+	limit loop to 3 times 
+		If Limit is reached 
+			Then print "Game Over. How about a nice game of chess?"
+		
+ 	If user inputs an integer <=1 OR >=10
+		Then print string = "Number not allowed."
+ 	If user inputs a number >=1 and <=10
+		Then compare CompPick to UserPick
+		If UserPick == CompPick
+		Then print "Congratulations! You have guessed correctly."
+		Else print "Number not guessed, please try again."
+			
+End LOOP
+
+End
 
