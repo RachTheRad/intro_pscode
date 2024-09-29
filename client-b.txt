@@ -2,3 +2,34 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+Task B: Find the Spot
+
+Start
+
+Define LocationCustomer = Where in the store the customer is located using GPS 
+    OR
+    Have customer input a location they are near
+        Define LocStoreSec_1 = Entrance
+        Define LocStoreSec_2 = Exit 
+        Define LocStoreSec_3 = Checkout area
+        Define LocStoreSec_4 = Restrooms
+        Define LocStoreSec_5 = Customer Service
+
+Have customer input what they want to find 
+    define locationItem=Item#_location
+    define Item#_location by referencing inventory list of itemCode
+    Have inventory connected to location in store (aisle and shelving) based on graphed store diagram
+
+Output directions to item from customers location using other locations as nodes
+    LocationItem is found at Item#_location
+        Define mapdirection
+        LOOP
+            Utilize Dijkstra's and A* algorithms to decide the quickest route to get from LocationCustomer to LocationItem
+                Print string="Go [mapdirection_1, mpadirection_2, mapdirection_3, mapdirection_4] for [distance]."
+            If LocationCustomer != locationItem 
+                THEN  Utilize Dijkstra's and A* algorithms to decide the quickest route to get from LocationCustomer to LocationItem
+                   Print string="Go [mapdirection] for [distance]."
+        End Loop when LocationCustomer==locationItem
+        Print "[locationItem] has been reached. [locationItem] is located at [Item#_location]."
+
+End
